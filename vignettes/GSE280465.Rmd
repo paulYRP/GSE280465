@@ -1,0 +1,79 @@
+---
+title: "GSE280465 EPICv2 methylation data"
+author: "Paul Ruiz Pinto"
+date: "`r Sys.Date()`"
+vignette: >
+  %\VignetteIndexEntry{GSE280465 EPICv2 methylation data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document
+---
+
+# GSE280465 EPICv2 methylation data
+
+`GSE280465` provides access to processed adult DNA methylation data derived
+from GEO accession
+[GSE280465](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE280465).
+The source data were generated on GPL33022, the Illumina Infinium
+MethylationEPIC version 2 array.
+
+The ExperimentHub resource is a `RangedSummarizedExperiment` with beta, M, and
+CN assays for 163 adult samples from 47 individuals. Samples represent buccal,
+saliva, dried blood spot, and peripheral blood mononuclear cell tissues.
+Genomic ranges use hg38 coordinates.
+
+The source publication is:
+
+Apsley AT, Ye Q, Caspi A, Chiaro C, Etzel L, Hastings WJ, Heim CM, Kozlosky J,
+Noll JG, Schreier HMC, Shenk CE, Sugden K, Shalev I. Cross-tissue comparison
+of epigenetic aging clocks in humans. Aging Cell. 2025;24(4):e14451.
+doi:10.1111/acel.14451.
+
+# Accessing the resource
+
+The data can be located in `ExperimentHub` using the GEO accession or the
+package name. The loaded object can then be inspected with standard
+`SummarizedExperiment` accessors.
+
+```{r access-resource, eval=FALSE}
+library(ExperimentHub)
+library(GSE280465)
+library(SummarizedExperiment)
+
+eh <- ExperimentHub()
+query(eh, "GSE280465")
+
+se <- GSE280465()
+se
+
+se <- GSE280465_GPL33022_EPICv2()
+
+dim(se)
+assayNames(se)
+colData(se)
+rowRanges(se)
+metadata(se)
+```
+
+The package metadata describe the hosted resource and its source.
+
+```{r local-metadata}
+metadataFile <- system.file("extdata", "metadata.csv", package = "GSE280465")
+metadata <- utils::read.csv(metadataFile, stringsAsFactors = FALSE)
+metadata[, c("Title", "Genome", "SourceType", "RDataClass", "DispatchClass")]
+```
+
+# Data availability
+
+The serialized `RangedSummarizedExperiment` is hosted on Zenodo:
+
+```{r zenodo-location}
+paste0(metadata$Location_Prefix, metadata$RDataPath)
+```
+
+# Session information
+
+```{r sessionInfo}
+sessionInfo()
+```
