@@ -1,3 +1,5 @@
+<a href="https://doi.org/10.5281/zenodo.21200586"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21200586.svg" alt="DOI"></a>
+
 # GSE280465
 
 `GSE280465` is a Bioconductor ExperimentHub data package for the processed
