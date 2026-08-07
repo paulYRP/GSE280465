@@ -1,0 +1,4 @@
+*.BiocCheck/
+*.Rcheck/
+*.tar.gz
+check-*/

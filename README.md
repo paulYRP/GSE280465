@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21200586.svg)](https://doi.org/10.5281/zenodo.21200586)
+[![Bioconductor DOI](https://img.shields.io/badge/DOI-10.18129%2FB9.bioc.GSE280465-green.svg)](https://bioconductor.org/packages/devel/data/experiment/html/GSE280465.html) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21200586.svg)](https://doi.org/10.5281/zenodo.21200586)
 
 # GSE280465
 

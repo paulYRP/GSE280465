@@ -1,5 +1,9 @@
 ^\.git$
 ^\.github$
+^.*\.BiocCheck$
+^.*\.Rcheck$
+^check-.*$
+^.*\.tar\.gz$
 ^README\.Rmd$
 ^.*\.Rproj$
 ^\.Rproj\.user$

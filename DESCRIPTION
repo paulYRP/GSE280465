@@ -1,14 +1,10 @@
 Package: GSE280465
 Type: Package
-Title: GSE280465 EPICv2 Methylation ExperimentHub Data
-Version: 0.99.0
-Date: 2026-07-05
-Authors@R: person(
-    given = "Paul",
-    family = "Ruiz Pinto",
-    role = c("aut", "cre"),
-    email = "ruizpint@qut.edu.au",
-    comment = c(ORCID = "0009-0007-6714-3566"))
+Title: EPICv2 Methylation ExperimentHub Data from GEO
+Version: 0.99.1
+Authors@R: person("Paul", "Ruiz", role = c("aut", "cre"),
+            email = "ruizpint@qut.edu.au",
+            comment = c(ORCID = "0009-0007-6714-3566"))
 Description: Provides ExperimentHub access to a processed DNA methylation
     resource derived from GEO accession GSE280465. The resource contains adult
     Illumina Infinium MethylationEPIC version 2 data from 163 samples across
@@ -27,8 +23,10 @@ Suggests:
     ExperimentHubData,
     knitr,
     rmarkdown,
-    SummarizedExperiment
+    SummarizedExperiment,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
+Config/testthat/edition: 3
 biocViews: ExperimentData, ExperimentHub, GEO, Homo_sapiens_Data,
     MethylationArrayData, MicroarrayData, Tissue
 Encoding: UTF-8
